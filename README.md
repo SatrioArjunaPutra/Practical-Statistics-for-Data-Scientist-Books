@@ -31,7 +31,11 @@ Practical-Statistics-for-Data-Scientist-Books/
 ├── Chapter2_Data_and_Sampling_Distributions.ipynb
 ├── Chapter3_Statistical_Experiments_Significance_Testing.ipynb
 ├── Chapter4_Regression_and_Prediction.ipynb
+├── Chapter5_Classification.ipynb
+├── Chapter6_Statistical_Machine_Learning.ipynb
+├── Chapter7_Unsupervised_Learning.ipynb
 │
+├── requirements.txt
 └── README.md
 ```
 
@@ -53,54 +57,50 @@ Practical-Statistics-for-Data-Scientist-Books/
 
 **Key Insights:**
 - Use the **median** or **trimmed mean** when data has outliers
-- **IQR and MAD** are robust measures of spread (less sensitive to outliers than std dev)
-- Visualisations reveal patterns (skewness, outliers, modes) that summary statistics hide
-- **Correlation ≠ Causation** — always visualise before interpreting relationships
+- **IQR and MAD** are robust measures of spread
+- Visualisations reveal patterns that summary statistics hide
+- **Correlation ≠ Causation**
 
 ---
 
 ### Chapter 2 — Data and Sampling Distributions
 
-This chapter covers the **theory of sampling** and **probability distributions** — fundamental to understanding statistical inference.
+This chapter covers **sampling** and **probability distributions** — fundamental to statistical inference.
 
 | Topic | Key Concepts |
 |-------|-------------|
 | **Random Sampling** | Population vs sample, sampling bias |
-| **Sampling Distribution** | Distribution of a statistic across many samples |
 | **Central Limit Theorem** | Sample means → Normal as n → ∞ |
 | **Bootstrap** | Resampling with replacement to estimate uncertainty |
 | **Confidence Intervals** | Range of plausible values for a parameter |
 | **Normal Distribution** | Bell curve, z-scores, 68-95-99.7 rule |
 | **Long-Tailed Distributions** | Heavy tails, power laws |
-| **t-Distribution** | For small samples or unknown σ |
-| **Binomial/Poisson** | Count distributions |
+| **t / Binomial / Poisson** | Small samples, count distributions |
 
 **Key Insights:**
 - **CLT:** Sample means are approximately normal for large n — regardless of population shape
 - **Bootstrap** works for *any* statistic without distributional assumptions
-- **Confidence Intervals** quantify uncertainty — wider CI = more uncertainty
-- Real-world data (income, web traffic) often follows **heavy-tailed distributions**
+- Real-world data often follows **heavy-tailed distributions**
 
 ---
 
 ### Chapter 3 — Statistical Experiments and Significance Testing
 
-This chapter covers **hypothesis testing** — the formal statistical framework for drawing conclusions from data.
+This chapter covers the formal statistical framework for drawing conclusions from data.
 
 | Topic | Key Concepts |
 |-------|-------------|
-| **A/B Testing** | Comparing two treatments; the gold standard for causal inference |
+| **A/B Testing** | Randomised experiment; gold standard for causal inference |
 | **Hypothesis Tests** | Null/alternative hypothesis, Type I/II errors |
 | **Permutation Tests** | Resampling-based; no distributional assumptions |
-| **p-values** | Evidence against H₀ — NOT probability H₀ is true |
+| **p-values** | Evidence against H0 — NOT probability H0 is true |
 | **t-tests** | Comparing means between groups |
 | **Multiple Testing** | Bonferroni correction, False Discovery Rate |
 | **ANOVA** | Comparing means across 3+ groups (F-statistic) |
 | **Chi-Square Test** | Independence of categorical variables |
 
 **Key Insights:**
-- **Randomisation** in A/B tests ensures groups are comparable (causal inference)
-- **p < 0.05 ≠ practically important** — always report effect sizes
+- **p < 0.05 is not practically important** — always report effect sizes
 - **Multiple testing** inflates false positives — always correct (Bonferroni or FDR)
 - **ANOVA** tells you *if* any group differs; use post-hoc tests to find *which* ones
 
@@ -112,27 +112,88 @@ This chapter covers **regression modelling** — the workhorse of predictive ana
 
 | Topic | Key Concepts |
 |-------|-------------|
-| **Simple Linear Regression** | OLS; β₁ = slope; minimise SSE |
+| **Simple Linear Regression** | OLS; slope; minimise SSE |
 | **Multiple Linear Regression** | Multiple predictors; partial effects |
 | **Model Assessment** | R², Adjusted R², RMSE, residual analysis |
 | **Factor Variables** | One-hot encoding; dummy variable trap |
 | **Multicollinearity** | VIF; unstable coefficients |
-| **Polynomial Regression** | Non-linear relationships with polynomial features |
-| **Interaction Terms** | When effect of X₁ depends on X₂ |
+| **Polynomial / Interaction** | Non-linear relationships and interaction effects |
 | **Model Selection** | AIC/BIC; stepwise selection |
 
 **Key Insights:**
-- In multiple regression, each β = **partial effect** (controlling for all other variables)
-- **R² alone is insufficient** — always inspect residual plots to validate assumptions
-- **Multicollinearity** (high VIF) makes coefficients unstable — check with VIF
-- Use **AIC/BIC** to balance model fit and complexity (prevent overfitting)
+- In multiple regression, each coefficient = **partial effect** (controlling for all other variables)
+- **R² alone is insufficient** — always inspect residual plots
+- **Multicollinearity** (high VIF) makes coefficients unstable
+
+---
+
+### Chapter 5 — Classification
+
+This chapter introduces supervised learning for **categorical targets**.
+
+| Topic | Key Concepts |
+|-------|-------------|
+| **Naive Bayes** | Probabilistic; assumes feature independence |
+| **Discriminant Analysis (LDA)** | Linear decision boundary; multivariate normal assumption |
+| **Logistic Regression** | Models log-odds; sigmoid function |
+| **Evaluating Classifiers** | Confusion matrix, Precision, Recall, F1, AUC-ROC |
+| **Decision Trees** | Recursive binary partitioning; Gini/Entropy impurity |
+| **Random Forests** | Ensemble of trees; OOB score; feature importance |
+| **XGBoost (Boosting)** | Sequential ensemble; regularisation; state-of-the-art |
+
+**Key Insights:**
+- **Accuracy is misleading** with imbalanced classes — use F1 or AUC
+- **Random Forests** are a reliable baseline for tabular classification
+- **XGBoost** consistently wins ML competitions — tune `n_estimators` + `learning_rate`
+
+---
+
+### Chapter 6 — Statistical Machine Learning
+
+This chapter bridges classical statistics and modern ML with key cross-cutting methods.
+
+| Topic | Key Concepts |
+|-------|-------------|
+| **K-Nearest Neighbors (KNN)** | Non-parametric; lazy learning; scale features |
+| **Cross-Validation** | Honest model evaluation; k-fold, LOOCV |
+| **Bias-Variance Trade-off** | Complexity vs generalisation |
+| **Ridge Regression (L2)** | Shrinks all coefficients; no feature selection |
+| **Lasso Regression (L1)** | Zero-out irrelevant features; automatic selection |
+| **Elastic Net** | Combines Ridge + Lasso; robust to correlated features |
+| **Model Interpretability** | Partial Dependence Plots; SHAP values |
+
+**Key Insights:**
+- **Never tune hyperparameters on the test set** — use cross-validation
+- **Lasso** performs automatic feature selection by zeroing coefficients
+- **SHAP values** are the gold standard for model explanation
+
+---
+
+### Chapter 7 — Unsupervised Learning
+
+This chapter covers finding structure in data *without* labeled responses.
+
+| Topic | Key Concepts |
+|-------|-------------|
+| **PCA** | Dimensionality reduction; explained variance; loadings |
+| **K-Means Clustering** | Partition into K clusters; elbow method |
+| **Hierarchical Clustering** | Dendrogram; no need to specify K; Ward's linkage |
+| **Gaussian Mixture Models** | Soft assignments; flexible shapes; BIC for model selection |
+| **Scaling** | Critical for distance-based methods |
+| **Categorical Data** | One-hot encoding; Gower's distance |
+
+**Key Insights:**
+- **PCA:** Use scree plot to choose number of components (>=80% cumulative variance)
+- **K-Means:** Use elbow method; sensitive to scale — always standardise
+- **GMM:** Probabilistic soft assignments; use BIC to select K
+- **Always scale** numeric features before distance-based clustering
 
 ---
 
 ## 🔧 Requirements
 
 ```bash
-pip install numpy pandas scipy scikit-learn statsmodels matplotlib seaborn wquantiles
+pip install numpy pandas scipy scikit-learn statsmodels matplotlib seaborn wquantiles xgboost
 ```
 
 Or install all at once:
@@ -152,7 +213,7 @@ pip install -r requirements.txt
 
 2. **Install dependencies:**
    ```bash
-   pip install numpy pandas scipy scikit-learn statsmodels matplotlib seaborn wquantiles
+   pip install -r requirements.txt
    ```
 
 3. **Open any notebook in Jupyter:**
@@ -160,18 +221,18 @@ pip install -r requirements.txt
    jupyter notebook Chapter1_Exploratory_Data_Analysis.ipynb
    ```
 
-> ⚠️ **Note:** All datasets are loaded automatically from the official book repository. An internet connection is required.
+> Note: All datasets are loaded automatically from the official book repository. An internet connection is required.
 
 ---
 
 ## 📚 Reference
 
-- **Book:** [Practical Statistics for Data Scientists, 2nd Edition](https://www.oreilly.com/library/view/practical-statistics-for/9781492072935/) — Peter Bruce, Andrew Bruce & Peter Gedeck
-- **Official Code Repository:** [github.com/gedeck/practical-statistics-for-data-scientists](https://github.com/gedeck/practical-statistics-for-data-scientists)
-- **Example Submission:** [github.com/farrelrassya/Practical-Statistics-for-Data-Scientist-Books](https://github.com/farrelrassya/Practical-Statistics-for-Data-Scientist-Books)
+- **Book:** Practical Statistics for Data Scientists, 2nd Edition — Peter Bruce, Andrew Bruce & Peter Gedeck (O'Reilly)
+- **Official Code Repository:** https://github.com/gedeck/practical-statistics-for-data-scientists
+- **Example Submission:** https://github.com/farrelrassya/Practical-Statistics-for-Data-Scientist-Books
 
 ---
 
-## ⚖️ Academic Integrity
+## Academic Integrity
 
 All code in this repository is original work based on the referenced book. Theoretical explanations are written by the author and may use LLM assistance as permitted by the assignment guidelines. All work adheres to academic integrity standards.
