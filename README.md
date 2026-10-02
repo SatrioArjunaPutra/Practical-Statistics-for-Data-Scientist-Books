@@ -1,238 +1,181 @@
 # Practical-Statistics-for-Data-Scientist-Books
 
-> **Code Reproduction + Theoretical Deep-Dive** from *Practical Statistics for Data Scientists* (O'Reilly)  
-> **Author:** Satrio Arjuna Putra  
-> **Course:** Enrichment for Machine Learning and Deep Learning Classes — Individual Task
+> **Code Reproduction + Theoretical Deep-Dive from Practical Statistics for Data Scientists (O'Reilly)**  
+> **Course:** Enrichment for Machine Learning and Deep Learning Classes — Individual Task  
+> **Student Name:** Satrio Arjuna Putra  
+> **Repository:** [SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books](https://github.com/SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books)  
+
+<p align="center">
+  <a href="https://www.amazon.com/Practical-Statistics-Data-Scientists-Essential/dp/149207294X">
+    <img alt="Practical Statistics for Data Scientists Cover" src="./cover.jpeg" width="220" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+  </a>
+</p>
 
 ---
 
-## 📖 About This Repository
+## 📖 Executive Summary & Overview
 
-This repository contains Python notebook reproductions of the code from each chapter of the book:
+This repository contains an end-to-end, rigorous Python code reproduction and structured theoretical deep-dive based on the book:
+**"Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python"** (Peter Bruce, Andrew Bruce, and Peter Gedeck — O'Reilly).
 
-> **Practical Statistics for Data Scientists** — Peter Bruce, Andrew Bruce & Peter Gedeck (O'Reilly, 2nd Edition)
-
-Each notebook includes:
-- ✅ **Reproduced code** from the chapter
-- 📚 **Theoretical explanations** of every concept
-- 📊 **Visualisations** to aid understanding
-- 🔑 **Key takeaways** summarising the chapter
-
-Data is loaded **directly from the official book GitHub repository** — no local files needed.
+Each notebook is designed with a high-standard pedagogical framework:
+1. **Interactive Cloud Execution:** Every notebook features an **Open in Colab** badge for zero-friction 1-click execution.
+2. **Robust Multi-Environment Data Loading:** Data loaders automatically check local directories first and fallback dynamically to the official raw repository URLs.
+3. **Structured Theoretical Foundations:** Comprehensive mathematical definitions, formulas, statistical intuitions, and practical implications for Machine Learning / Deep Learning.
+4. **Complete Code Reproduction:** Exact reproduction of the book's experiments, tables, figures, algorithms, and diagnostic visualizations.
+5. **Output Interpretation:** Deep analytical explanations of numeric coefficients, statistical tests, model metrics, and plots.
+6. **Cross-Chapter Synthesis:** Direct connections linking classical statistics to modern AI algorithms (e.g., OLS to Neural Network loss surfaces, Logistic Regression to Cross-Entropy, PCA to Latent Representations).
 
 ---
 
-## 📂 Repository Structure
+## 🚀 Interactive Notebooks & Table of Contents
+
+| Chapter | Title | Primary Focus & Statistical Algorithms | Interactive Colab Badge |
+| :---: | :--- | :--- | :---: |
+| **01** | **Exploratory Data Analysis** | Location (Mean, Median, MAD), Variability, Boxplots, Hexbin, Correlation Matrix | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books/blob/main/PracticalStatisticsChapter1.ipynb) |
+| **02** | **Data and Sampling Distributions** | Central Limit Theorem (CLT), Bootstrap Confidence Intervals, Normal, QQ-Plot, Poisson, Weibull | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books/blob/main/PracticalStatisticsChapter2.ipynb) |
+| **03** | **Statistical Experiments & Testing** | A/B Testing, Resampling & Permutation Tests, p-Values, ANOVA (F-statistic), Chi-Square | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books/blob/main/PracticalStatisticsChapter3.ipynb) |
+| **04** | **Regression and Prediction** | OLS Simple/Multiple Regression, Residual Diagnostics, Stepwise AIC/BIC, Factor Dummies, Splines & GAM | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books/blob/main/PracticalStatisticsChapter4.ipynb) |
+| **05** | **Classification** | Naive Bayes, Linear Discriminant Analysis (LDA), Logistic Regression (Logit/Odds), Confusion Matrix, ROC-AUC, SMOTE | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books/blob/main/PracticalStatisticsChapter5.ipynb) |
+| **06** | **Statistical Machine Learning** | K-Nearest Neighbors (KNN), Decision Trees & Impurity (Gini/Entropy), Random Forests (OOB), XGBoost Regularization | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books/blob/main/PracticalStatisticsChapter6.ipynb) |
+| **07** | **Unsupervised Learning** | Principal Component Analysis (PCA & Scree plot), Correspondence Analysis, K-Means, Hierarchical Clustering (Dendrograms), GMM | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books/blob/main/PracticalStatisticsChapter7.ipynb) |
+
+---
+
+## 📂 Repository File Structure
 
 ```
 Practical-Statistics-for-Data-Scientist-Books/
 │
-├── Chapter1_Exploratory_Data_Analysis.ipynb
-├── Chapter2_Data_and_Sampling_Distributions.ipynb
-├── Chapter3_Statistical_Experiments_Significance_Testing.ipynb
-├── Chapter4_Regression_and_Prediction.ipynb
-├── Chapter5_Classification.ipynb
-├── Chapter6_Statistical_Machine_Learning.ipynb
-├── Chapter7_Unsupervised_Learning.ipynb
+├── PracticalStatisticsChapter1.ipynb    # Chapter 1: Exploratory Data Analysis
+├── PracticalStatisticsChapter2.ipynb    # Chapter 2: Data and Sampling Distributions
+├── PracticalStatisticsChapter3.ipynb    # Chapter 3: Statistical Experiments & Significance Testing
+├── PracticalStatisticsChapter4.ipynb    # Chapter 4: Regression and Prediction
+├── PracticalStatisticsChapter5.ipynb    # Chapter 5: Classification
+├── PracticalStatisticsChapter6.ipynb    # Chapter 6: Statistical Machine Learning
+├── PracticalStatisticsChapter7.ipynb    # Chapter 7: Unsupervised Learning
 │
-├── requirements.txt
-└── README.md
+├── cover.jpeg                           # Official book cover image
+├── _config.yml                          # GitHub Pages Jekyll theme configuration
+├── requirements.txt                     # Complete project dependencies
+└── README.md                            # Comprehensive project documentation
 ```
 
 ---
 
-## 📋 Chapter Summaries
+## 📘 Comprehensive Chapter-by-Chapter Summaries
 
-### Chapter 1 — Exploratory Data Analysis
+### Chapter 1: Exploratory Data Analysis (EDA)
+Exploratory Data Analysis, pioneered by John Tukey, forms the empirical foundation of data science. EDA emphasizes looking beyond summary numbers to uncover underlying distributions, anomalies, and multivariate structures.
+* **Estimates of Location:** Comparison of arithmetic mean, trimmed mean (which dampens extreme outliers), weighted mean (adjusting for sample sizes), and median (the 50th percentile robust metric).
+* **Estimates of Variability:** Quantifying dispersion via variance, standard deviation, interquartile range ($IQR = Q_3 - Q_1$), and median absolute deviation from the median ($MAD$).
+* **Distribution Exploration:** Visualizing single features using percentiles, Tukey boxplots (highlighting outliers $> 1.5 \times IQR$), histograms, and kernel density estimation (KDE).
+* **Binary & Categorical Data:** Frequency analysis, mode, bar plots, and proportions.
+* **Multivariate Relationships:** Quantifying linear association using Pearson's correlation coefficient, and addressing overplotting through hexagonal binning (hexbin), contour density plots, violin plots, and correlation heatmaps.
 
-**Exploratory Data Analysis (EDA)** is the process of summarising, visualising, and understanding a dataset before formal modelling.
+### Chapter 2: Data and Sampling Distributions
+In data science, we rarely possess the entire census population; instead, we infer population traits from finite samples.
+* **Sampling Bias & Random Sampling:** Distinguishing between data quality and data quantity. Big data is not immune to selection bias if the sampling mechanism is systematic.
+* **Sampling Distribution of a Statistic:** The critical distinction between the distribution of individual data points and the distribution of a sample statistic (e.g., the distribution of sample means).
+* **Central Limit Theorem (CLT):** Demonstrates that the sampling distribution of the mean approaches normality as sample size $n$ increases, even when the underlying population distribution is heavily skewed.
+* **The Bootstrap:** A non-parametric resampling technique that samples with replacement from the observed dataset to generate empirical confidence intervals without assuming a theoretical distribution.
+* **Standard Probability Distributions:** Normal (Gaussian), Student's $t$ (for heavier tails and small sample sizes), Binomial (Bernoulli trials), Poisson (event rates in fixed intervals), and Weibull (reliability/survival modeling).
 
-| Topic | Key Concepts |
-|-------|-------------|
-| **Estimates of Location** | Mean, trimmed mean, weighted mean, median |
-| **Estimates of Variability** | Standard deviation, variance, IQR, MAD |
-| **Exploring the Distribution** | Percentiles, boxplots, histograms, density plots |
-| **Categorical Data** | Mode, bar charts |
-| **Exploring Relationships** | Correlation, scatter plots, heat maps, hexbin plots |
+### Chapter 3: Statistical Experiments and Significance Testing
+This chapter establishes the scientific framework for decision-making and hypothesis testing.
+* **A/B Testing:** Controlled experimental design with randomized assignment into control and treatment variants to establish causal inference.
+* **Hypothesis Testing & Permutation Tests:** Formulation of the Null Hypothesis ($H_0$) and Alternative Hypothesis ($H_a$). Permutation/randomization tests reshuffle observed data to calculate exact empirical p-values without normality assumptions.
+* **p-Values & Significance:** The true meaning of a p-value: the probability of observing an effect at least as extreme as the sample data, assuming $H_0$ is true. Reporting effect sizes alongside significance to distinguish practical significance from statistical significance.
+* **Type I & Type II Errors:** Alpha ($\alpha$, false positive) vs. Beta ($\beta$, false negative), and experimental statistical power ($1 - \beta$).
+* **Multi-Arm Experiments & ANOVA:** Analysis of Variance using the $F$-statistic to compare variances across three or more treatment groups while controlling the family-wise error rate.
+* **Chi-Square Test:** Testing independence between categorical variables and goodness-of-fit against expected counts.
 
-**Key Insights:**
-- Use the **median** or **trimmed mean** when data has outliers
-- **IQR and MAD** are robust measures of spread
-- Visualisations reveal patterns that summary statistics hide
-- **Correlation ≠ Causation**
+### Chapter 4: Regression and Prediction
+Linear regression is the cornerstone of statistical modeling and supervised learning.
+* **Simple & Multiple Linear Regression:** Ordinary Least Squares (OLS) optimization minimizing the Sum of Squared Residuals ($SSE = \sum (y_i - \hat{y}_i)^2$). Interpreting coefficients as partial effects holding all other predictors constant.
+* **Model Assessment & Diagnostics:** Root Mean Squared Error ($RMSE$), Coefficient of Determination ($R^2$), and residual analysis for homoscedasticity, normality, and absence of autocorrelation.
+* **Factor Variables & Encoding:** Dummy encoding (one-hot encoding) and the necessity of dropping the reference category (`drop_first=True`) to avoid the dummy variable trap (perfect multicollinearity).
+* **Model Selection Criteria:** Stepwise selection penalizing model complexity using Akaike Information Criterion ($AIC = 2k - 2\ln(L)$) and Bayesian Information Criterion ($BIC = k\ln(n) - 2\ln(L)$).
+* **Non-Linear Relationships:** Polynomial regression, basis splines (B-splines), and Generalized Additive Models (GAM) modeling flexible non-linear curves without overfitting.
 
----
+### Chapter 5: Classification
+Supervised classification focuses on assigning records into discrete categories.
+* **Naive Bayes:** Probabilistic classification based on Bayes' Theorem ($P(Y|X) \propto P(Y) \prod P(X_i|Y)$) under the strong (naive) assumption of feature conditional independence.
+* **Linear Discriminant Analysis (LDA):** Modeling class-conditional feature distributions as multivariate normals with equal covariance matrices to maximize between-class variance relative to within-class variance.
+* **Logistic Regression & Generalized Linear Models (GLM):** Modeling the log-odds (logit transformation $\ln(p / (1-p)) = X\beta$) through the sigmoid function, allowing direct probabilistic interpretation.
+* **Model Evaluation:** Moving beyond raw accuracy on imbalanced datasets by analyzing the Confusion Matrix, Precision, Recall/Sensitivity, Specificity, and the Area Under the ROC Curve ($AUC$).
+* **Strategies for Imbalanced Data:** Cost-sensitive learning, class weighting, undersampling majority classes, and synthetic data generation via SMOTE (Synthetic Minority Over-sampling Technique).
 
-### Chapter 2 — Data and Sampling Distributions
+### Chapter 6: Statistical Machine Learning
+Bridging statistical models with modern non-parametric algorithms and regularization.
+* **K-Nearest Neighbors (KNN):** Distance-based non-parametric classifier. Highlights the critical requirement of feature standardization (Z-scores) and demonstrates using KNN as a feature engineering score (`borrower_score`).
+* **Decision Trees (CART):** Recursive binary partitioning optimizing node purity using Gini Impurity ($1 - \sum p_i^2$) and Information Entropy ($-\sum p_i \log_2 p_i$).
+* **Ensemble Learning — Bagging & Random Forests:** Bootstrap aggregation across randomized subsets of features, evaluating generalization error using Out-of-Bag (OOB) accuracy, and calculating Gini and Permutation feature importances.
+* **Boosting & Regularization (XGBoost):** Sequential residual learning with shrinkage (learning rate), tree depth constraints, and early stopping to prevent severe overfitting.
+* **Hyperparameter Tuning & Cross-Validation:** Systematic $K$-fold cross-validation exploring hyperparameters to ensure true out-of-sample generalization.
 
-This chapter covers **sampling** and **probability distributions** — fundamental to statistical inference.
-
-| Topic | Key Concepts |
-|-------|-------------|
-| **Random Sampling** | Population vs sample, sampling bias |
-| **Central Limit Theorem** | Sample means → Normal as n → ∞ |
-| **Bootstrap** | Resampling with replacement to estimate uncertainty |
-| **Confidence Intervals** | Range of plausible values for a parameter |
-| **Normal Distribution** | Bell curve, z-scores, 68-95-99.7 rule |
-| **Long-Tailed Distributions** | Heavy tails, power laws |
-| **t / Binomial / Poisson** | Small samples, count distributions |
-
-**Key Insights:**
-- **CLT:** Sample means are approximately normal for large n — regardless of population shape
-- **Bootstrap** works for *any* statistic without distributional assumptions
-- Real-world data often follows **heavy-tailed distributions**
-
----
-
-### Chapter 3 — Statistical Experiments and Significance Testing
-
-This chapter covers the formal statistical framework for drawing conclusions from data.
-
-| Topic | Key Concepts |
-|-------|-------------|
-| **A/B Testing** | Randomised experiment; gold standard for causal inference |
-| **Hypothesis Tests** | Null/alternative hypothesis, Type I/II errors |
-| **Permutation Tests** | Resampling-based; no distributional assumptions |
-| **p-values** | Evidence against H0 — NOT probability H0 is true |
-| **t-tests** | Comparing means between groups |
-| **Multiple Testing** | Bonferroni correction, False Discovery Rate |
-| **ANOVA** | Comparing means across 3+ groups (F-statistic) |
-| **Chi-Square Test** | Independence of categorical variables |
-
-**Key Insights:**
-- **p < 0.05 is not practically important** — always report effect sizes
-- **Multiple testing** inflates false positives — always correct (Bonferroni or FDR)
-- **ANOVA** tells you *if* any group differs; use post-hoc tests to find *which* ones
+### Chapter 7: Unsupervised Learning
+Extracting latent structure, clusters, and dimensionality reductions without ground truth labels.
+* **Principal Component Analysis (PCA):** Orthogonal linear transformation mapping high-dimensional correlated features to uncorrelated principal components maximizing variance. Scree plots and cumulative variance curves guide component selection.
+* **Correspondence Analysis (CA):** Biplot visualization of associations between categorical variables in contingency tables.
+* **K-Means Clustering:** Partitioning data into $K$ spherical clusters minimizing within-cluster sum of squares (inertia), with $K$ determined via the Elbow Method.
+* **Hierarchical Clustering:** Bottom-up agglomerative clustering visualized via Dendrograms, comparing Complete, Average, Single, and Ward linkage methods.
+* **Model-Based Clustering (Gaussian Mixture Models - GMM):** Soft probabilistic cluster assignments fitting mixtures of multivariate Gaussians, selecting optimal component counts via BIC.
+* **Data Scale Sensitivity:** Demonstrating how unscaled variables and binary dummy encoding can distort distance calculations and cluster assignments.
 
 ---
 
-### Chapter 4 — Regression and Prediction
+## 🛠️ Prerequisites & Installation
 
-This chapter covers **regression modelling** — the workhorse of predictive analytics.
-
-| Topic | Key Concepts |
-|-------|-------------|
-| **Simple Linear Regression** | OLS; slope; minimise SSE |
-| **Multiple Linear Regression** | Multiple predictors; partial effects |
-| **Model Assessment** | R², Adjusted R², RMSE, residual analysis |
-| **Factor Variables** | One-hot encoding; dummy variable trap |
-| **Multicollinearity** | VIF; unstable coefficients |
-| **Polynomial / Interaction** | Non-linear relationships and interaction effects |
-| **Model Selection** | AIC/BIC; stepwise selection |
-
-**Key Insights:**
-- In multiple regression, each coefficient = **partial effect** (controlling for all other variables)
-- **R² alone is insufficient** — always inspect residual plots
-- **Multicollinearity** (high VIF) makes coefficients unstable
-
----
-
-### Chapter 5 — Classification
-
-This chapter introduces supervised learning for **categorical targets**.
-
-| Topic | Key Concepts |
-|-------|-------------|
-| **Naive Bayes** | Probabilistic; assumes feature independence |
-| **Discriminant Analysis (LDA)** | Linear decision boundary; multivariate normal assumption |
-| **Logistic Regression** | Models log-odds; sigmoid function |
-| **Evaluating Classifiers** | Confusion matrix, Precision, Recall, F1, AUC-ROC |
-| **Decision Trees** | Recursive binary partitioning; Gini/Entropy impurity |
-| **Random Forests** | Ensemble of trees; OOB score; feature importance |
-| **XGBoost (Boosting)** | Sequential ensemble; regularisation; state-of-the-art |
-
-**Key Insights:**
-- **Accuracy is misleading** with imbalanced classes — use F1 or AUC
-- **Random Forests** are a reliable baseline for tabular classification
-- **XGBoost** consistently wins ML competitions — tune `n_estimators` + `learning_rate`
-
----
-
-### Chapter 6 — Statistical Machine Learning
-
-This chapter bridges classical statistics and modern ML with key cross-cutting methods.
-
-| Topic | Key Concepts |
-|-------|-------------|
-| **K-Nearest Neighbors (KNN)** | Non-parametric; lazy learning; scale features |
-| **Cross-Validation** | Honest model evaluation; k-fold, LOOCV |
-| **Bias-Variance Trade-off** | Complexity vs generalisation |
-| **Ridge Regression (L2)** | Shrinks all coefficients; no feature selection |
-| **Lasso Regression (L1)** | Zero-out irrelevant features; automatic selection |
-| **Elastic Net** | Combines Ridge + Lasso; robust to correlated features |
-| **Model Interpretability** | Partial Dependence Plots; SHAP values |
-
-**Key Insights:**
-- **Never tune hyperparameters on the test set** — use cross-validation
-- **Lasso** performs automatic feature selection by zeroing coefficients
-- **SHAP values** are the gold standard for model explanation
-
----
-
-### Chapter 7 — Unsupervised Learning
-
-This chapter covers finding structure in data *without* labeled responses.
-
-| Topic | Key Concepts |
-|-------|-------------|
-| **PCA** | Dimensionality reduction; explained variance; loadings |
-| **K-Means Clustering** | Partition into K clusters; elbow method |
-| **Hierarchical Clustering** | Dendrogram; no need to specify K; Ward's linkage |
-| **Gaussian Mixture Models** | Soft assignments; flexible shapes; BIC for model selection |
-| **Scaling** | Critical for distance-based methods |
-| **Categorical Data** | One-hot encoding; Gower's distance |
-
-**Key Insights:**
-- **PCA:** Use scree plot to choose number of components (>=80% cumulative variance)
-- **K-Means:** Use elbow method; sensitive to scale — always standardise
-- **GMM:** Probabilistic soft assignments; use BIC to select K
-- **Always scale** numeric features before distance-based clustering
-
----
-
-## 🔧 Requirements
+To run these notebooks locally, set up a Python 3.9+ environment and install the required dependencies:
 
 ```bash
-pip install numpy pandas scipy scikit-learn statsmodels matplotlib seaborn wquantiles xgboost
-```
+# Clone this repository
+git clone https://github.com/SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books.git
+cd Practical-Statistics-for-Data-Scientist-Books
 
-Or install all at once:
-```bash
+# Create and activate virtual environment (optional but recommended)
+python -m venv venv
+# On Windows:
+venv\Scripts\activate
+# On Linux/macOS:
+source venv/bin/activate
+
+# Install required packages
 pip install -r requirements.txt
 ```
 
----
-
-## 🚀 How to Run
-
-1. **Clone this repository:**
-   ```bash
-   git clone https://github.com/SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books.git
-   cd Practical-Statistics-for-Data-Scientist-Books
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Open any notebook in Jupyter:**
-   ```bash
-   jupyter notebook Chapter1_Exploratory_Data_Analysis.ipynb
-   ```
-
-> Note: All datasets are loaded automatically from the official book repository. An internet connection is required.
+To launch the Jupyter Notebook interface locally:
+```bash
+jupyter notebook
+```
 
 ---
 
-## 📚 Reference
+## 📦 Key Dependencies
 
-- **Book:** Practical Statistics for Data Scientists, 2nd Edition — Peter Bruce, Andrew Bruce & Peter Gedeck (O'Reilly)
-- **Official Code Repository:** https://github.com/gedeck/practical-statistics-for-data-scientists
-- **Example Submission:** https://github.com/farrelrassya/Practical-Statistics-for-Data-Scientist-Books
+All required libraries are detailed in [`requirements.txt`](./requirements.txt):
+* **Core & Numerical:** `numpy`, `pandas`, `scipy`
+* **Machine Learning & Modeling:** `scikit-learn`, `statsmodels`, `xgboost`, `pygam`, `dmba`, `prince`, `imblearn`
+* **Data Visualization:** `matplotlib`, `seaborn`, `adjustText`
+* **Statistics Extensions:** `wquantiles`, `pydotplus`
 
 ---
 
-## Academic Integrity
+## 📑 References & Citations
 
-All code in this repository is original work based on the referenced book. Theoretical explanations are written by the author and may use LLM assistance as permitted by the assignment guidelines. All work adheres to academic integrity standards.
+1. **Primary Reference Book:**  
+   Bruce, P., Bruce, A., & Gedeck, P. (2020). *Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python* (2nd ed.). O'Reilly Media. ISBN: 978-1492072942.
+2. **Official Book Repository & Data Sources:**  
+   [gedeck/practical-statistics-for-data-scientists](https://github.com/gedeck/practical-statistics-for-data-scientists)
+3. **Peer Benchmark Reference:**  
+   [farrelrassya/Practical-Statistics-for-Data-Scientist-Books](https://github.com/farrelrassya/Practical-Statistics-for-Data-Scientist-Books)
+
+---
+
+## 👤 Author Information
+
+* **Name:** Satrio Arjuna Putra
+* **Course:** Enrichment Machine Learning & Deep Learning
+* **Institution:** Undergraduate Degree Program (Semester 7)
+* **GitHub:** [@SatrioArjunaPutra](https://github.com/SatrioArjunaPutra)
