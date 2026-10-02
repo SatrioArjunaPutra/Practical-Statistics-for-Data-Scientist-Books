@@ -55,6 +55,7 @@ Practical-Statistics-for-Data-Scientist-Books/
 ├── PracticalStatisticsChapter6.ipynb    # Chapter 6: Statistical Machine Learning
 ├── PracticalStatisticsChapter7.ipynb    # Chapter 7: Unsupervised Learning
 │
+├── data/                                # All 19 official datasets (CSV, CSV.GZ)
 ├── cover.jpeg                           # Official book cover image
 ├── _config.yml                          # GitHub Pages Jekyll theme configuration
 ├── requirements.txt                     # Complete project dependencies
