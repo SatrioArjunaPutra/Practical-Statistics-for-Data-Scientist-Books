@@ -162,14 +162,10 @@ All required libraries are detailed in [`requirements.txt`](./requirements.txt):
 
 ---
 
-## 📑 References & Citations
+## 📑 References
 
-1. **Primary Reference Book:**  
-   Bruce, P., Bruce, A., & Gedeck, P. (2020). *Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python* (2nd ed.). O'Reilly Media. ISBN: 978-1492072942.
-2. **Official Book Repository & Data Sources:**  
-   [gedeck/practical-statistics-for-data-scientists](https://github.com/gedeck/practical-statistics-for-data-scientists)
-3. **Peer Benchmark Reference:**  
-   [farrelrassya/Practical-Statistics-for-Data-Scientist-Books](https://github.com/farrelrassya/Practical-Statistics-for-Data-Scientist-Books)
+* **Primary Reference Book:**  
+  Bruce, P., Bruce, A., & Gedeck, P. (2020). *Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python* (2nd ed.). O'Reilly Media. ISBN: 978-1492072942.
 
 ---
 
