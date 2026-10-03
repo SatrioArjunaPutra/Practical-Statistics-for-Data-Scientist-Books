@@ -1,9 +1,13 @@
 # Practical-Statistics-for-Data-Scientist-Books
 
+> **Tugas 1: Enrichment for Machine Learning and Deep Learning Classes**  
 > **Code Reproduction + Theoretical Deep-Dive from Practical Statistics for Data Scientists (O'Reilly)**  
-> **Course:** Enrichment for Machine Learning and Deep Learning Classes — Individual Task  
-> **Student Name:** Satrio Arjuna Putra  
-> **Repository:** [SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books](https://github.com/SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books)  
+> 
+> **Informasi Mahasiswa:**  
+> - **Nama:** SatrioArjuna Putra  
+> - **NIM:** 101032330178  
+> - **Kelas:** TK-47-05  
+> - **Repository:** [SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books](https://github.com/SatrioArjunaPutra/Practical-Statistics-for-Data-Scientist-Books)  
 
 <p align="center">
   <a href="https://www.amazon.com/Practical-Statistics-Data-Scientists-Essential/dp/149207294X">
@@ -169,9 +173,10 @@ All required libraries are detailed in [`requirements.txt`](./requirements.txt):
 
 ---
 
-## 👤 Author Information
+## 👤 Informasi Mahasiswa / Author Information
 
-* **Name:** Satrio Arjuna Putra
-* **Course:** Enrichment Machine Learning & Deep Learning
-* **Institution:** Undergraduate Degree Program (Semester 7)
+* **Nama:** SatrioArjuna Putra
+* **NIM:** 101032330178
+* **Kelas:** TK-47-05
+* **Mata Kuliah:** Tugas 1: Enrichment for Machine Learning and Deep Learning Classes
 * **GitHub:** [@SatrioArjunaPutra](https://github.com/SatrioArjunaPutra)
